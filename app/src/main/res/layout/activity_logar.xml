@@ -4,32 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Logar">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="396dp"
-            app:srcCompat="@drawable/plantravel_logo" />
-
-        <Button
-            android:id="@+id/btnLogar"
+        <EditText
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="logar"
-            android:text="logar" />
+            android:ems="10"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress" />
 
-        <Button
-            android:id="@+id/btnCadastrar"
+        <EditText
+            android:id="@+id/edtSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="cadastrar"
-            android:text="Cadastrar" />
+            android:ems="10"
+            android:hint="Senha"
+            android:inputType="textPassword" />
 
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logar" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
