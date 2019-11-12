@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Cadastrar"></activity>
+        <activity android:name=".NewTravel"></activity>
+        <activity
+            android:name=".MenuLateral"
+            android:label="@string/title_activity_menu_lateral"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Principal" />
+        <activity android:name=".Cadastrar" />
         <activity android:name=".Logar" />
         <activity android:name=".MainActivity">
             <intent-filter>

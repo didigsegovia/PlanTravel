@@ -47,6 +47,7 @@
             android:id="@+id/btnFzrCadastro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="cadastrar"
             android:text="Cadastrar" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
