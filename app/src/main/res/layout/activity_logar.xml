@@ -9,28 +9,43 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/mapabackground"
         android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/largura_logomenor"
+            android:layout_height="@dimen/altura_logomenor"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/logomenorsemfundo"
+            />
 
         <EditText
             android:id="@+id/edtEmail"
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/edt_largura"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
             android:ems="10"
             android:hint="E-mail"
             android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/edtSenha"
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/edt_largura"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:ems="10"
             android:hint="Senha"
             android:inputType="textPassword" />
 
         <Button
             android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/tamanho_botao"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/botao_customizado"
+            android:layout_marginTop="40dp"
             android:onClick="Login"
             android:text="Logar" />
     </LinearLayout>

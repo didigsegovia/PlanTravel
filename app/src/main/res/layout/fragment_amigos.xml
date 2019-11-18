@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_basico"
+    tools:context=".Amigos">
+
+    <TextView
+        android:layout_width="@dimen/edt_largura"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Amigos"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/listUsuarios"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="150dp">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/btnAddAmigo"
+        android:layout_width="@dimen/tamanho_botao"
+        android:layout_height="40dp"
+        android:background="@drawable/botao_customizado"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="-100dp"
+        android:layout_marginLeft="100dp"
+        android:onClick="addAmigo"
+        android:text="Adicionar Amigo"
+        tools:ignore="OnClick" />
+
+
+</LinearLayout>

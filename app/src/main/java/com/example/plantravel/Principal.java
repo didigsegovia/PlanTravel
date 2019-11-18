@@ -2,10 +2,11 @@ package com.example.plantravel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Adapter;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.List;
 public class Principal extends AppCompatActivity {
 
     private ListView listViewUsuarios;
+    private Button btnAddAmigo;             /* adicionado botão pra add amigo */
     ArrayAdapter<String> adapter;
     ArrayList<String> arrayList;
 
@@ -22,6 +24,7 @@ public class Principal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
+        btnAddAmigo = findViewById(R.id.btnAddAmigo);
         listViewUsuarios = findViewById(R.id.listUsuarios);
         listarUsuarios();
     }
@@ -38,5 +41,9 @@ public class Principal extends AppCompatActivity {
             arrayList.add(u.getId() + " - " + u.getNome());
             adapter.notifyDataSetChanged();
         }
+    }
+    public void addAmigo(View view) {
+        Intent it = new Intent(this, AddAmigo.class);
+        startActivity(it);
     }
 }

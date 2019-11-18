@@ -1,5 +1,7 @@
 package com.example.plantravel;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -11,6 +13,9 @@ import android.view.View;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.core.view.GravityCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -30,6 +35,7 @@ public class MenuLateral extends AppCompatActivity implements NavigationView.OnN
 
     private AppBarConfiguration mAppBarConfiguration;
     DrawerLayout drawer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,25 +86,57 @@ public class MenuLateral extends AppCompatActivity implements NavigationView.OnN
                 || super.onSupportNavigateUp();
     }
 
+    @SuppressLint("ResourceType")
     @Override
     public boolean onNavigationItemSelected(MenuItem item){
         int id = item.getItemId();
 
         switch (id) {
             case R.id.nav_home: {
-                Toast.makeText(this, "Menu 1", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Inicio", Toast.LENGTH_SHORT).show();
+                Fragment fragmento = new Inicio();
+                FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
+
+                trans.replace(R.id.nav_host_fragment, fragmento);
+                trans.addToBackStack(null);
+
+                trans.commit();
                 break;
             }
             case R.id.nav_new_travel: {
-                Toast.makeText(this, "Menu 2", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Nova Viagem", Toast.LENGTH_SHORT).show();
+                Fragment fragmento = new NewTravel();
+                FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
+
+                trans.replace(R.id.nav_host_fragment, fragmento);
+                trans.addToBackStack(null);
+
+                trans.commit();
+
                 break;
             }
             case R.id.nav_friends: {
-                Toast.makeText(this, "Menu 3", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Amigos", Toast.LENGTH_SHORT).show();
+                Fragment fragmento = new Amigos(this);
+                FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
+
+                trans.replace(R.id.nav_host_fragment, fragmento);
+                trans.addToBackStack(null);
+
+                trans.commit();
+
                 break;
             }
             case R.id.nav_account: {
-                Toast.makeText(this, "Menu 4", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show();
+                Fragment fragmento = new Perfil();
+                FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
+
+                trans.replace(R.id.nav_host_fragment, fragmento);
+                trans.addToBackStack(null);
+
+                trans.commit();
+
                 break;
             }
             case R.id.nav_logout: {

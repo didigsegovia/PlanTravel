@@ -7,27 +7,27 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.plantravel.ui.home.HomeFragment"
+        android:name="com.example.plantravel.Inicio"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_inicio" />
 
     <fragment
         android:id="@+id/nav_new_travel"
-        android:name="com.example.plantravel.ui.gallery.GalleryFragment"
+        android:name="com.example.plantravel.NewTravel"
         android:label="@string/menu_new_travel"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_new_travel" />
 
     <fragment
         android:id="@+id/nav_friends"
-        android:name="com.example.plantravel.ui.slideshow.SlideshowFragment"
+        android:name="com.example.plantravel.Amigos"
         android:label="@string/menu_friends"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_amigos" />
 
     <fragment
         android:id="@+id/nav_account"
-        android:name="com.example.plantravel.ui.tools.ToolsFragment"
+        android:name="com.example.plantravel.Perfil"
         android:label="@string/menu_account"
-        tools:layout="@layout/fragment_tools" />
+        tools:layout="@layout/fragment_perfil" />
 
 
 
