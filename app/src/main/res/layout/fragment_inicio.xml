@@ -17,11 +17,12 @@
         />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerID"
+        android:id="@+id/recyclerViagens"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="150dp"
+        tools:listitem="@layout/layout_adapter"
 
         />
 
