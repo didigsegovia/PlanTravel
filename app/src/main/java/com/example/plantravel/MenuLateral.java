@@ -36,6 +36,8 @@ public class MenuLateral extends AppCompatActivity implements NavigationView.OnN
     private AppBarConfiguration mAppBarConfiguration;
     DrawerLayout drawer;
 
+    Intent intent;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +51,8 @@ public class MenuLateral extends AppCompatActivity implements NavigationView.OnN
             public void onClick(View view) {
                 Snackbar.make(view, "Adicionar viagem", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-
+                intent = new Intent(MenuLateral.this, AdicionarViagem.class);
+                startActivity(intent);
             }
         });
         drawer = findViewById(R.id.drawer_layout);

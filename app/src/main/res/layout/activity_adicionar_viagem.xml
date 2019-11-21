@@ -27,6 +27,8 @@
         android:id="@+id/edtViagem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
         android:hint="Nome da viagem"
         android:layout_marginTop="10dp"
         />
@@ -34,8 +36,28 @@
         android:id="@+id/edtLocal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
         android:hint="Local da viagem"
         android:layout_marginTop="10dp"/>
+
+
+    <Button
+        android:id="@+id/btnAddViagem"
+        android:layout_width="@dimen/tamanho_botao"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/botao_customizado"
+        android:layout_marginTop="10dp"
+        android:text="Adicionar viagem"
+        android:onClick="adicionaViagem"
+        />
+
+
+
+    <!-- Adicionar localização da viagem -->
+
+
 
 
 

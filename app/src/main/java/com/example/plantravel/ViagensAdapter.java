@@ -24,6 +24,9 @@ public class ViagensAdapter extends RecyclerView.Adapter<LinhaHolder> {
         modelo = usuarios;
     }
 
+
+
+
     @Override
     public LinhaHolder onCreateViewHolder(ViewGroup parent, int viewType){
         return new LinhaHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_adapter, parent, false));
@@ -85,6 +88,7 @@ public class ViagensAdapter extends RecyclerView.Adapter<LinhaHolder> {
     /** Método publico pra fazer update na lista*/
 
     public void updateList(UserModel usuario){
+
         insertItem(usuario);
     }
 
