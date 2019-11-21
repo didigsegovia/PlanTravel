@@ -1,6 +1,8 @@
 package com.example.plantravel;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -18,9 +20,11 @@ import com.google.android.material.snackbar.Snackbar;
  */
 public class Perfil extends Fragment {
 
+    Context ctx;
 
-    public Perfil() {
+    public Perfil(Context ctx) {
         // Required empty public constructor
+        this.ctx = ctx;
     }
 
 
@@ -35,6 +39,9 @@ public class Perfil extends Fragment {
 
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         /* **** IMPLEMENTAR AQUI O CÓDIGO DO FRAGMENT, POIS IRÁ FUNCIONAR APENAS NESSE CAMPO **** */
+        Intent it;
+        it = new Intent(ctx, Principal.class);
+        startActivity(it);
     }
 
 }

@@ -56,12 +56,14 @@ public class AddAmigo extends AppCompatActivity {
 
     }
 
-    public void AdicionaAmigo(View v){
+    public void salvarAlt(View v){
 
         String nomeAmigo = edtNomeAmigo.getText().toString();
         if(!nomeAmigo.isEmpty()){
             /* IMPLEMENTAR A PARTE DE ADICIONAR AMIGO NO BANCO DE DADOS */
             /* foto na variável "imagem" e nome na variavel "nomeAmigo" */
+            finish();
+
         }
 
 

@@ -117,11 +117,14 @@ public class MenuLateral extends AppCompatActivity implements NavigationView.OnN
 
                 trans.commit();
 
+                /*Intent it = new Intent(MenuLateral.this, NewTravel.class);
+                startActivity(it);
+                */
                 break;
             }
             case R.id.nav_friends: {
                 //Toast.makeText(this, "Amigos", Toast.LENGTH_SHORT).show();
-                Fragment fragmento = new Amigos(this);
+                Fragment fragmento = new Perfil(this);
                 FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
 
                 trans.replace(R.id.nav_host_fragment, fragmento);
@@ -133,14 +136,17 @@ public class MenuLateral extends AppCompatActivity implements NavigationView.OnN
             }
             case R.id.nav_account: {
                 //Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show();
-                Fragment fragmento = new Perfil();
+                /*Fragment fragmento = new Amigos(this);
                 FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
 
                 trans.replace(R.id.nav_host_fragment, fragmento);
                 trans.addToBackStack(null);
 
                 trans.commit();
+                */
 
+                Intent it = new Intent(MenuLateral.this, AddAmigo.class);
+                startActivity(it);
                 break;
             }
             case R.id.nav_logout: {

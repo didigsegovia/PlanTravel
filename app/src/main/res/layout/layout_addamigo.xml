@@ -40,7 +40,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:background="@drawable/botao_customizado"
-        android:text="Adicionar"
-        android:onClick="AdicionaAmigo"/>
+        android:text="Salvar alterações"
+        android:onClick="salvarAlt"/>
 
 </LinearLayout>

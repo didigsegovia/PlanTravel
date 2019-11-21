@@ -43,9 +43,6 @@ public class Amigos extends Fragment {
 
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         /* **** IMPLEMENTAR AQUI O CÓDIGO DO FRAGMENT, POIS IRÁ FUNCIONAR APENAS NESSE CAMPO **** */
-        Intent it;
-        it = new Intent(ctx, Principal.class);
-        startActivity(it);
 
 
     }
