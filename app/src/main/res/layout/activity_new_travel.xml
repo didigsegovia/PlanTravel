@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NewTravel">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView2"
@@ -51,8 +46,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Entre com o nome do local" />
+            android:hint="Entre com o nome do local"
+            android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/btnLoc"
@@ -60,16 +55,26 @@
             android:layout_height="wrap_content"
             android:text="Buscar" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/endereco"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="130dp"
+            android:gravity="center"
+            android:text="Endereço"
+            android:textSize="5sp" />
 
-    <TextView
-        android:id="@+id/endereco"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Endereço"
-        android:textSize="25sp"
-        android:gravity="center"
-        android:layout_marginTop="10dp">
-    </TextView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btnCriarViagem"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:onClick="criarViagem"
+            android:text="Criar"
+            tools:layout_editor_absoluteY="227dp" />
+
+</LinearLayout>

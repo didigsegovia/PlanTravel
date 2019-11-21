@@ -7,6 +7,8 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Handler;
 import android.os.Message;
@@ -16,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -29,7 +32,7 @@ public class NewTravel extends Fragment {
         this.ctx = ctx;
     }
 
-    private Button btnLoc, btnSelect;
+    private Button btnLoc, btnSelect, btnCriarViagem;
     private EditText edtLocal;
     private TextView txtEnd;
 
@@ -45,6 +48,7 @@ public class NewTravel extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         btnLoc = (Button) getView().findViewById(R.id.btnLoc);
         btnSelect = (Button) getView().findViewById(R.id.btnSelect);
+        btnCriarViagem = getView().findViewById(R.id.btnCriarViagem);
         edtLocal = (EditText) getView().findViewById(R.id.edtLoc);
         txtEnd = (TextView) getView().findViewById(R.id.endereco);
 
@@ -64,7 +68,26 @@ public class NewTravel extends Fragment {
                 startActivity(it);
             }
         });*/
+
+        btnCriarViagem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(ctx, "Viagem criada", Toast.LENGTH_SHORT).show();
+                Fragment fragmento = new Inicio();
+                FragmentTransaction trans = getFragmentManager().beginTransaction();
+                trans.replace(R.id.nav_host_fragment, fragmento);
+                trans.commit();
+            }
+        });
     }
+
+    /*public void criarViagem(View v){
+        Toast.makeText(ctx, "Viagem criada", Toast.LENGTH_SHORT).show();
+        Fragment fragmento = new Inicio();
+        FragmentTransaction trans = getFragmentManager().beginTransaction();
+        trans.replace(R.id.nav_host_fragment, fragmento);
+        trans.commit();
+    }*/
 
     private class GeoHandler extends Handler{
         @Override
