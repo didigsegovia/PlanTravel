@@ -78,8 +78,9 @@ public class Principal extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.action_selected_item:
                         for(String msg: list_items){
-                            Log.d("Lista TESTE", "\nID: " + list_items.get(0));
+                        /*    Log.d("Lista TESTE", "\nID: " + list_items.get(0));
                             Log.d("Lista TESTE", "\nID: " + list_items.get(1));
+                          */
                             adapter.remove(msg);
                         }
                         Toast.makeText(getBaseContext(), count + " itens selecionados", Toast.LENGTH_SHORT).show();

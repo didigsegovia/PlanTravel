@@ -1,6 +1,8 @@
 package com.example.plantravel;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -22,9 +24,9 @@ import com.google.android.material.snackbar.Snackbar;
  */
 public class NewTravel extends Fragment {
 
-
+    Context ctx;
     public NewTravel() {
-
+        this.ctx = ctx;
     }
 
     private Button btnLoc, btnSelect;
@@ -55,12 +57,13 @@ public class NewTravel extends Fragment {
             }
         });
 
-        btnSelect.setOnClickListener(new View.OnClickListener() {
+        /*btnSelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent it = new Intent(ctx, Principal.class);
+                startActivity(it);
             }
-        });
+        });*/
     }
 
     private class GeoHandler extends Handler{
